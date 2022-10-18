@@ -1,0 +1,41 @@
+# training
+seed: 2022
+epochs: 10
+batch_size: 2
+image_size: [480, 640]
+mixed_precision: True
+small: False
+iters: 10
+wdecay: 0.00005
+gamma: 0.8
+add_noise: True
+dropout: 0.0
+clip: 1.0
+lr: 0.0001
+clamp: 200
+save_ckpt_itr_freq: 2000
+epsilon: 1.0e-8 
+num_workers: 16
+sample_maxlen: 1000
+dim_corr: 192
+dim_corr_coarse: 64
+dim_corr_all: 256
+fnet: 'CNN'  # CNN twins
+ 
+debug_data: False
+
+# for bidirection
+sed_loss: True
+tnf_loss: True
+
+# data
+dataset: MegaDepth_CAPS
+training_data_dir: './data'
+validate_data_dir: './data/validation'
+tnf_type: random
+workspace: './snapshot'
+validate: False
+
+master_addr: 'localhost'
+master_port: '12345'
+

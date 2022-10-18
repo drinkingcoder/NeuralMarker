@@ -1,0 +1,11 @@
+notebook
+run
+data
+*__pycache__*
+models
+snapshot
+*.ipynb_checkpoints
+wandb
+configs/params_tmp.yaml
+pre_trained_model
+test.py

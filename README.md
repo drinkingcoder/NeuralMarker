@@ -6,7 +6,28 @@
 > SIGGRAPH Asia (ToG) 2022  
 
 ## TODO List
-- [ ] Code release (2022-10-15)
+- [x] Code release (2022-10-15)
 - [ ] Models release (2022-10-20)
 - [ ] Demo code release (2022-10-25)
 - [ ] Dataset&Evaluation code release (2022-10-30)
+
+## Environment
+```
+conda create -n neuralmarker
+conda activate neuralmarker
+conda install python=3.7
+pip install -r requirements.txt
+```
+
+## Dataset
+
+We use the MegaDepth dataset that preprocessed by [CAPS](https://github.com/qianqianwang68/caps), which is provided in this [link](https://drive.google.com/file/d/1-o4TRLx6qm8ehQevV7nExmVJXfMxj657/view?usp=sharing).
+
+## Training
+We train our model on 6 V100 with batch size 2.
+```
+python train.py
+```
+
+## Acknowledgements
+We thank Yijin Li, Rensen Xu, and Jundan Luo for their help.
