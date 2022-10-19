@@ -22,12 +22,25 @@ pip install -r requirements.txt
 ## Dataset
 
 We use the MegaDepth dataset that preprocessed by [CAPS](https://github.com/qianqianwang68/caps), which is provided in this [link](https://drive.google.com/file/d/1-o4TRLx6qm8ehQevV7nExmVJXfMxj657/view?usp=sharing).
+We generate FlyingMarkers training set online. To genenerate FlyingMarkers validation set and test set, please execute:
+```
+python synthesis_datasets.py --root ./data/MegaDepth_CAPS/ --csv ./data/synthesis_validate_release.csv --save_dir ./data/flyingmarkers/validation
+python synthesis_datasets.py --root ./data/MegaDepth_CAPS/ --csv ./data/synthesis_validate_short.csv --save_dir ./data/validation/synthesis
+python synthesis_datasets.py --root ./data/MegaDepth_CAPS/ --csv ./data/synthesis_test_release.csv --save_dir ./data/flyingmarkers/test
+```
+
 
 ## Training
 We train our model on 6 V100 with batch size 2.
 ```
-python train.py
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 python train.py
+```
+
+## Evaluation
+```
+python evaluate.py
 ```
 
 ## Acknowledgements
 We thank Yijin Li, Rensen Xu, and Jundan Luo for their help.
+We refer DGC-Net to generate synthetic image pairs.

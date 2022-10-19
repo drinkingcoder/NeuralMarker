@@ -1,6 +1,8 @@
 notebook
 run
-data
+data/flyingmarkers
+data/validation
+data/MegaDepth_CAPS
 *__pycache__*
 models
 snapshot
