@@ -17,11 +17,6 @@ source_name="doctor_strange.jpg"
 # scene_name="cards.jpg"
 # source_name="Coca-Cola-Logo.jpg"
 
-# marker_name="sonic.jpg"
-# scene_name="scene_sonic.jpg"
-# source_name="fantastic_beast.jpg"
-
-
 echo "demo: replace marker in harsh lighting environment"
 python demo_harsh_lighting.py --exp_dir $exp_dir --marker_name $marker_name \
  --scene_name $scene_name --source_name $source_name 
