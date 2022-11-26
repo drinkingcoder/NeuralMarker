@@ -7,7 +7,7 @@ class FlowHead(nn.Module):
     def __init__(self, input_dim=128, hidden_dim=256):
         super(FlowHead, self).__init__()
         self.conv1 = nn.Conv2d(input_dim, hidden_dim, 3, padding=1)
-        self.conv2 = nn.Conv2d(hidden_dim, 2, 3, padding=1)
+        self.conv2 = nn.Conv2d(hidden_dim, 3, 3, padding=1)
         self.relu = nn.ReLU(inplace=True)
 
     def forward(self, x):
@@ -130,6 +130,7 @@ class BasicUpdateBlock(nn.Module):
 
         net = self.gru(net, inp)
         delta_flow = self.flow_head(net)
+        delta_flow = delta_flow[:, :2]
 
         # scale mask to balence gradients
         mask = .25 * self.mask(net)
