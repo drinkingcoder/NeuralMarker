@@ -21,10 +21,7 @@ source_name="doctor_strange.jpg"
 # scene_name="scene_sonic.jpg"
 # source_name="fantastic_beast.jpg"
 
-poster_brightness=1/4.5
-model="twins-onestage"
 
 echo "demo: replace marker in harsh lighting environment"
 python demo_harsh_lighting.py --exp_dir $exp_dir --marker_name $marker_name \
  --scene_name $scene_name --source_name $source_name 
-#  --model $model --poster_brightness $poster_brightness 

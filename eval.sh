@@ -13,8 +13,8 @@ then
     cp ./pre_trained_model/backbone_weight/vgg16-397923af.pth ~/.cache/torch/hub/checkpoints/
 fi
 
-root="./assets"
-save_root="./output"
+root="/mnt/nas_8/group/weihong/OpticalFlow/NeuralMarkerEval&Demo/assets"
+save_root="/mnt/nas_8/group/weihong/OpticalFlow/NeuralMarkerEval&Demo/output"
 
 blend_type="L"
 blend_method="twins-onestage"
