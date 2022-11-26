@@ -37,8 +37,28 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 python train.py
 ```
 
 ## Evaluation
+organize evaluation dataset as:
 ```
-python evaluate.py
+- assets
+    - D        
+    - V
+    - L
+    - marker
+```
+then run
+```
+bash eval.sh
+```
+
+## Demo
+for video demo, run
+```
+bash demo_video.sh
+```
+
+for harsh lighting demo with NIID-Net, run
+```
+bash demo_harsh_lighting.sh
 ```
 
 ## Acknowledgements

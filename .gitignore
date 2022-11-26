@@ -11,3 +11,4 @@ wandb
 configs/params_tmp.yaml
 pre_trained_model
 test.py
+third_party

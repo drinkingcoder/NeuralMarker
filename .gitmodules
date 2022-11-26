@@ -1,0 +1,13 @@
+[submodule "third_party/DenseMatching"]
+	path = third_party/DenseMatching
+	url = https://github.com/PruneTruong/DenseMatching.git	
+[submodule "tthird_party/RANSAC-Flow"]
+	path = third_party/RANSAC-Flow
+	url = https://github.com/XiSHEN0220/RANSAC-Flow.git
+[submodule "third_party/NIID"]
+	path = third_party/NIID
+	url = https://github.com/zju3dv/NIID-Net.git	
+[submodule "third_party/SPSG"]
+	path = third_party/SPSG
+	url = https://github.com/magicleap/SuperGluePretrainedNetwork.git
+
