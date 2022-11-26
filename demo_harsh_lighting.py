@@ -7,7 +7,7 @@ import sys
 sys.path.append('./core')
 from flow_estimator import Flow_estimator
 from harsh_lighting_utils import image_editing
-from config import get_demo_harsh_lighting_args,get_twins_args
+from config import get_demo_harsh_lighting_args,get_life_args
 
 sys.path.append('./third_party/NIID')
 sys.path.append('./third_party/NIID/utils')
@@ -85,8 +85,7 @@ def process_image(args):
     niid_net.switch_to_eval()
     
     print('===> Load Flow Estimate Model')
-    estimator_args = get_twins_args()   
-    print(estimator_args) 
+    estimator_args = get_life_args()       
     estimator = Flow_estimator(estimator_args)
 
     # ========== Edit Image =========

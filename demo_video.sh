@@ -8,7 +8,7 @@ then
     pip install --upgrade kornia==0.6.3
 fi
 
-demo_root="./demo/demo_video"
+demo_root="/mnt/nas_8/group/weihong/OpticalFlow/NeuralMarkerEval&Demo/demo/demo_video"
 marker_name="fantastic_beast.jpg"
 scene_name="scene.mp4"
 movie_name="movie.mp4"

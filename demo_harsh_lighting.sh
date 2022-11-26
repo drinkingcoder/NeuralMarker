@@ -8,7 +8,7 @@ then
     pip install --upgrade kornia==0.6.3
 fi
 
-exp_dir="./demo/demo_harsh_lighting"
+exp_dir="/mnt/nas_8/group/weihong/OpticalFlow/NeuralMarkerEval&Demo/demo/demo_harsh_lighting"
 marker_name="fantastic_beast.jpg"
 scene_name="scene_beast.jpg"
 source_name="doctor_strange.jpg"

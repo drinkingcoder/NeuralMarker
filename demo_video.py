@@ -15,7 +15,7 @@ import sys
 # model path
 sys.path.append('./core')
 from flow_estimator import Flow_estimator
-from config import get_demo_video_args, get_twins_args
+from config import get_demo_video_args, get_life_args
 
 def read_video(video_path):
     cap = cv2.VideoCapture(video_path)
@@ -176,7 +176,7 @@ def demo():
     frames = frames[args.movie_start_idx:]  
 
     print('===> Loading Model\n')  
-    model_args = get_twins_args()    
+    model_args = get_life_args()        
     estimator = Flow_estimator(model_args)
     
     if args.test:

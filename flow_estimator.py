@@ -8,11 +8,15 @@ import os
 class Flow_estimator():
     def __init__(self, args):
 
-        self.args = args        
-        self.network = torch.nn.DataParallel(RAFT(args)).cuda()
+        self.args = args 
         if not os.path.exists(args.model):            
-            raise FileExistsError(args.model)
-        self.network.load_state_dict(torch.load(args.model)["model"], False)
+            raise FileExistsError(args.model)       
+        # self.network = torch.nn.DataParallel(RAFT(args)).cuda()
+        # self.network.load_state_dict(torch.load(args.model)["model"], False)
+
+        self.network = RAFT(args).cuda()
+        self.network.load_state_dict(torch.load(args.model), False)
+
         #for parameters in self.network.parameters():
         #    print(parameters)
 

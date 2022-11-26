@@ -58,8 +58,17 @@ def get_twins_args():
     parser.add_argument("--model", type=str, default="./pre_trained_model/Twins_new/onestage.pth")
     parser.add_argument("--fnet", type=str, default='twins')
     parser.add_argument("--twoscale", type=str, default=False)
-
     return parser.parse_known_args()[0]    
+
+def get_life_args():
+    parser = configargparse.ArgParser(config_file_parser_class=configargparse.YAMLConfigFileParser)
+    parser.add_argument('--iters', type=int, default=12)
+    parser.add_argument('--mixed_precision', type=bool, default=True)
+    parser.add_argument('--small', action='store_true', help='use small model')
+    parser.add_argument("--fnet", type=str, default='CNN')
+    parser.add_argument('--model', type=str, default="./pre_trained_model/LIFE/pretrain.pth", help="choose the trained model")    
+    args = parser.parse_known_args()[0]
+    return args
 
 def get_demo_video_args():
     parser = argparse.ArgumentParser()
