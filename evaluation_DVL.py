@@ -17,35 +17,12 @@ import datetime
 from PIL import Image
 
 import sys
-# PDC-Net path
-sys.path.append(os.path.abspath('./third_party/DenseMatching/'))
-sys.path.append(os.path.abspath('./third_party/DenseMatching/third_party'))
-from easydict import EasyDict as easydic
-from third_party.DenseMatching.model_selection import select_model
-
-# RANSAC-Flow Path
-sys.path.append('./third_party/RANSAC-Flow')
-sys.path.append('./third_party/RANSAC-Flow/utils')
-sys.path.append('./third_party/RANSAC-Flow/model')
-sys.path.append('./third_party/RANSAC-Flow/quick_start')
-from coarseAlignFeatMatch import CoarseAlign
-import model as model
-import PIL.Image as Image 
-import kornia.geometry as tgm
-if not sys.warnoptions:
-    warnings.simplefilter("ignore")
 
 # our model
 sys.path.append('./core')
 from flow_estimator import Flow_estimator
 from config import get_twins_args, get_eval_args
 
-# SPSG path
-sys.path.append('./third_party/SPSG')
-sys.path.append('./third_party/SPSG/models')
-import matplotlib.cm as cm 
-from third_party.SPSG.models.matching import Matching
-from third_party.SPSG.models.utils import frame2tensor
 torch.set_grad_enabled(False)
 
 from colormap import get_colormap

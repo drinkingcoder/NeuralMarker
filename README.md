@@ -6,10 +6,10 @@
 > SIGGRAPH Asia (ToG) 2022  
 
 ## TODO List
-- [x] Code release (2022-10-15)
-- [ ] Models release (2022-10-20)
-- [ ] Demo code release (2022-10-25)
-- [ ] Dataset&Evaluation code release (2022-10-30)
+- [x] Code release
+- [x] Models release 
+- [x] Demo code release 
+- [x] Dataset&Evaluation code release 
 
 ## Environment
 ```
@@ -29,6 +29,8 @@ python synthesis_datasets.py --root ./data/MegaDepth_CAPS/ --csv ./data/synthesi
 python synthesis_datasets.py --root ./data/MegaDepth_CAPS/ --csv ./data/synthesis_test_release.csv --save_dir ./data/flyingmarkers/test
 ```
 
+The pretrained models, DVL-Markers benchmark, and data for demo are stored in [Google Drive](https://drive.google.com/drive/folders/1PZvFhx9P3TJZEiLowav-al0hhSH3hxrh?usp=share_link).
+
 
 ## Training
 We train our model on 6 V100 with batch size 2.
@@ -36,18 +38,25 @@ We train our model on 6 V100 with batch size 2.
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 python train.py
 ```
 
-## Evaluation
-organize evaluation dataset as:
+## DVL-Markers Evaluation
+Put the DVL-Markers dataset in `data`:
 ```
-- assets
-    - D        
-    - V
-    - L
-    - marker
+├── data 
+    ├── DVL
+        ├── D
+        ├── V
+        ├── L
+        ├── marker
 ```
 then run
 ```
-bash eval.sh
+bash eval_DVL.sh
+```
+The results will be saved in `output`
+
+## FlyingMarkers Evaluation
+```
+python evaluation_FM.py
 ```
 
 ## Demo
@@ -56,10 +65,6 @@ for video demo, run
 bash demo_video.sh
 ```
 
-for harsh lighting demo with NIID-Net, run
-```
-bash demo_harsh_lighting.sh
-```
 
 ## Acknowledgements
 We thank Yijin Li, Rensen Xu, and Jundan Luo for their help.

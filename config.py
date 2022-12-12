@@ -55,7 +55,7 @@ def get_twins_args():
     parser.add_argument("--dim_corr", type=int, default=192)
     parser.add_argument("--dim_corr_coarse", type=int, default=64)
     parser.add_argument("--dim_corr_all", type=int, default=192)    
-    parser.add_argument("--model", type=str, default="./pre_trained_model/NeuralMarker/twins_one.pth")
+    parser.add_argument("--model", type=str, default="./pretrained_models/twins_one.pth")
     parser.add_argument("--fnet", type=str, default='twins')
     parser.add_argument("--twoscale", type=str, default=False)
     return parser.parse_known_args()[0]    
@@ -66,7 +66,7 @@ def get_life_args():
     parser.add_argument('--mixed_precision', type=bool, default=True)
     parser.add_argument('--small', action='store_true', help='use small model')
     parser.add_argument("--fnet", type=str, default='CNN')
-    parser.add_argument('--model', type=str, default="./pre_trained_model/NeuralMarker/cnn_one.pth", help="choose the trained model")    
+    parser.add_argument('--model', type=str, default="./pretrained_models/cnn_one.pth", help="choose the trained model")    
     args = parser.parse_known_args()[0]
     return args
 
